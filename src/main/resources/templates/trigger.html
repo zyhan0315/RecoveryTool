@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>刚刚发生了什么</title>
+
+<style>
+
+body{
+    background:#f7f9fc;
+    font-family:Arial,sans-serif;
+    padding:20px;
+}
+
+.card{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.option{
+    width:100%;
+    padding:16px;
+    margin:10px 0;
+    border:none;
+    border-radius:12px;
+    background:#eef2f7;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.option:hover{
+    background:#dfe8f1;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>
+刚刚发生了什么？
+</h2>
+
+<form action="/saveTrigger" method="post">
+
+<button class="option" type="submit"
+name="triggerReason"
+value="吃了计划外的食物">
+吃了计划外的食物
+</button>
+
+<button class="option" type="submit"
+name="triggerReason"
+value="接触到了想吃的食物">
+接触到了想吃的食物
+</button>
+
+<button class="option" type="submit"
+name="triggerReason"
+value="有计划被打乱了">
+有计划被打乱了
+</button>
+
+<button class="option" type="submit"
+name="triggerReason"
+value="今天状态不如预期">
+今天状态不如预期
+</button>
+
+<button class="option" type="submit"
+name="triggerReason"
+value="对未来有些担心">
+对未来有些担心
+</button>
+
+<button class="option" type="submit"
+name="triggerReason"
+value="感觉失控了">
+感觉失控了
+</button>
+
+<button class="option" type="submit"
+name="triggerReason"
+value="正在等待某件事">
+正在等待某件事
+</button>
+
+<button class="option" type="submit"
+name="triggerReason"
+value="想立刻解决一个问题">
+想立刻解决一个问题
+</button>
+
+<button class="option" type="submit"
+name="triggerReason"
+value="发生了一些事导致心情不好">
+发生了一些事导致心情不好
+</button>
+
+<button class="option" type="submit"
+name="triggerReason"
+value="说不清楚">
+说不清楚
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

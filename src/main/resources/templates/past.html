@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>来自过去的我</title>
+
+<style>
+
+body{
+    background:#f7f9fc;
+    font-family:Arial,sans-serif;
+    padding:20px;
+}
+
+.container{
+    max-width:500px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    line-height:1.8;
+}
+
+.date{
+    color:#888;
+    margin-bottom:15px;
+}
+
+.label{
+    font-weight:bold;
+}
+
+.btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+.primary{
+    background:#8dc6a3;
+    color:white;
+}
+
+.secondary{
+    background:#eef2f7;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title">
+        🌿 来自过去的我
+    </div>
+
+    <div class="card">
+
+        <div class="date"
+             th:text="${record.createTime}">
+        </div>
+
+        <div>
+            <span class="label">当时：</span>
+            <span th:text="${record.triggerReason}">
+            </span>
+        </div>
+
+        <div>
+            <span class="label">我最想获得：</span>
+            <span th:text="${record.needReason}">
+            </span>
+        </div>
+
+        <div>
+            <span class="label">最后：</span>
+            <span th:text="${record.resultText}">
+            </span>
+        </div>
+
+        <br>
+
+        <div>
+            <span class="label">给未来的我：</span>
+            <br>
+
+            <span th:text="${record.summaryText}">
+            </span>
+        </div>
+
+    </div>
+
+    <button class="btn secondary"
+            onclick="reloadPast()">
+        🔄 再看一条
+    </button>
+
+    <button class="btn primary"
+            onclick="nextPage()">
+        🌿 继续
+    </button>
+
+</div>
+
+<script>
+
+function nextPage(){
+    window.location.href="/action";
+}
+
+function reloadPast(){
+    location.reload();
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>你希望获得什么</title>
+
+<style>
+
+body{
+    background:#f7f9fc;
+    font-family:Arial,sans-serif;
+    padding:20px;
+}
+
+.card{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+    line-height:1.5;
+}
+
+.option{
+    width:100%;
+    padding:16px;
+    margin:10px 0;
+    border:none;
+    border-radius:12px;
+    background:#eef2f7;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.option:hover{
+    background:#dfe8f1;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>
+如果吃东西能帮你做到一件事
+</h2>
+
+<div class="subtitle">
+你最希望它帮你做到什么？
+</div>
+
+<form action="/saveNeed" method="post">
+
+<button class="option"
+type="submit"
+name="needReason"
+value="缓解不确定感">
+缓解不确定感
+</button>
+
+<button class="option"
+type="submit"
+name="needReason"
+value="停止思考和担忧">
+停止思考和担忧
+</button>
+
+<button class="option"
+type="submit"
+name="needReason"
+value="获得安慰">
+获得安慰
+</button>
+
+<button class="option"
+type="submit"
+name="needReason"
+value="找回控制感">
+找回控制感
+</button>
+
+<button class="option"
+type="submit"
+name="needReason"
+value="奖励自己">
+奖励自己
+</button>
+
+<button class="option"
+type="submit"
+name="needReason"
+value="拖延要面对的问题或抉择">
+拖延要面对的问题或抉择
+</button>
+
+<button class="option"
+type="submit"
+name="needReason"
+value="获得食物本身带来的满足感">
+获得食物本身带来的满足感
+</button>
+
+<button class="option"
+type="submit"
+name="needReason"
+value="不知道">
+不知道
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

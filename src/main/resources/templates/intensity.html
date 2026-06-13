@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>冲动强度</title>
+
+<style>
+
+body{
+    background:#f7f9fc;
+    font-family:Arial,sans-serif;
+    padding:20px;
+}
+
+.card{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+
+h2{
+    margin-bottom:30px;
+}
+
+.score{
+    width:60px;
+    height:60px;
+    margin:8px;
+    border:none;
+    border-radius:50%;
+    font-size:20px;
+    cursor:pointer;
+    background:#eef2f7;
+    transition:0.2s;
+}
+
+.score:hover{
+    background:#dfe8f1;
+    transform:scale(1.05);
+}
+
+.tip{
+    margin-top:25px;
+    color:#666;
+    font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h2>
+        此刻冲动强度是多少？
+    </h2>
+
+    <div>
+
+        <form action="/saveIntensity" method="post">
+
+            <button class="score" type="submit" name="intensity" value="1">1</button>
+            <button class="score" type="submit" name="intensity" value="2">2</button>
+            <button class="score" type="submit" name="intensity" value="3">3</button>
+            <button class="score" type="submit" name="intensity" value="4">4</button>
+            <button class="score" type="submit" name="intensity" value="5">5</button>
+
+            <br><br>
+
+            <button class="score" type="submit" name="intensity" value="6">6</button>
+            <button class="score" type="submit" name="intensity" value="7">7</button>
+            <button class="score" type="submit" name="intensity" value="8">8</button>
+            <button class="score" type="submit" name="intensity" value="9">9</button>
+            <button class="score" type="submit" name="intensity" value="10">10</button>
+
+        </form>
+
+    </div>
+
+    <div class="tip">
+        不需要准确，只要选择最接近的感觉即可
+    </div>
+
+</div>
+
+</body>
+</html>

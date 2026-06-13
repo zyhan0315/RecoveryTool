@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>最后发生了什么</title>
+
+<style>
+
+body{
+    background:#f7f9fc;
+    font-family:Arial,sans-serif;
+    padding:20px;
+}
+
+.card{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+
+h2{
+    text-align:center;
+}
+
+.option{
+    width:100%;
+    padding:16px;
+    margin:10px 0;
+    border:none;
+    border-radius:12px;
+    background:#eef2f7;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.option:hover{
+    background:#dfe8f1;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>
+最后实际发生了什么？
+</h2>
+
+<form action="/saveResult" method="post">
+
+<button class="option"
+type="submit"
+name="resultText"
+value="没吃">
+没吃
+</button>
+
+<button class="option"
+type="submit"
+name="resultText"
+value="吃了一些">
+吃了一些
+</button>
+
+<button class="option"
+type="submit"
+name="resultText"
+value="暴食了">
+暴食了
+</button>
+
+<button class="option"
+type="submit"
+name="resultText"
+value="其他">
+其他
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

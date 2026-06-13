@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>记录详情</title>
+
+<style>
+
+body{
+    background:#f7f9fc;
+    font-family:Arial,sans-serif;
+    padding:20px;
+}
+
+.container{
+    max-width:600px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+
+.title{
+    text-align:center;
+    font-size:26px;
+    margin-bottom:20px;
+}
+
+.item{
+    margin-bottom:18px;
+    line-height:1.8;
+}
+
+.label{
+    font-weight:bold;
+}
+
+.btn{
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    border:none;
+    border-radius:12px;
+    background:#8dc6a3;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">
+📖 记录详情
+</div>
+
+<div class="card">
+
+<div class="item">
+<span class="label">时间：</span>
+<span th:text="${record.createTime}"></span>
+</div>
+
+<div class="item">
+<span class="label">冲动强度：</span>
+<span th:text="${record.intensity}"></span>
+</div>
+
+<div class="item">
+<span class="label">情绪：</span>
+<span th:text="${record.emotion}"></span>
+</div>
+
+<div class="item">
+<span class="label">发生了什么：</span>
+<br>
+<span th:text="${record.triggerReason}"></span>
+</div>
+
+<div class="item">
+<span class="label">真正想获得：</span>
+<br>
+<span th:text="${record.needReason}"></span>
+</div>
+
+<div class="item">
+<span class="label">采取行动：</span>
+<br>
+<span th:text="${record.actionTaken}"></span>
+</div>
+
+<div class="item">
+<span class="label">最后结果：</span>
+<br>
+<span th:text="${record.resultText}"></span>
+</div>
+
+<div class="item">
+<span class="label">给未来的我：</span>
+<br>
+<span th:text="${record.summaryText}"></span>
+</div>
+
+<button class="btn"
+        onclick="location.href='/history'">
+返回记录列表
+</button>
+
+</div>
+
+</div>
+
+</body>
+</html>

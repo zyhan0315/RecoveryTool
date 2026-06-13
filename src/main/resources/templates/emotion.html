@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>情绪</title>
+
+<style>
+
+body{
+    background:#f7f9fc;
+    font-family:Arial;
+    padding:20px;
+}
+
+.card{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+}
+
+h2{
+    text-align:center;
+}
+
+.option{
+    width:100%;
+    padding:16px;
+    margin:10px 0;
+    border:none;
+    border-radius:12px;
+    background:#eef2f7;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.option:hover{
+    background:#dfe8f1;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>
+这一刻最真实的感受是什么？
+</h2>
+
+<form action="/saveEmotion" method="post">
+
+    <button class="option" type="submit" name="emotion" value="焦虑">
+        焦虑
+    </button>
+
+    <button class="option" type="submit" name="emotion" value="烦躁">
+        烦躁
+    </button>
+
+    <button class="option" type="submit" name="emotion" value="失望">
+        失望
+    </button>
+
+    <button class="option" type="submit" name="emotion" value="委屈">
+        委屈
+    </button>
+
+    <button class="option" type="submit" name="emotion" value="孤独">
+        孤独
+    </button>
+
+    <button class="option" type="submit" name="emotion" value="空虚">
+        空虚
+    </button>
+
+    <button class="option" type="submit" name="emotion" value="不确定">
+        不确定
+    </button>
+
+    <button class="option" type="submit" name="emotion" value="说不清">
+        说不清
+    </button>
+
+</form>
+
+</div>
+
+</body>
+</html>

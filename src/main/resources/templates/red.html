@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>暂停一下</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:20px;
+    background:#f7f9fc;
+    font-family:Arial,sans-serif;
+}
+
+.card{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.circle{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:#a8d5ba;
+
+    margin:30px auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:24px;
+    font-weight:bold;
+
+    transition:all 4s linear;
+}
+
+.timer{
+    font-size:36px;
+    margin:20px 0;
+}
+
+.tip{
+    background:#f3f6fb;
+    padding:15px;
+    border-radius:12px;
+    margin-top:20px;
+    color:#555;
+}
+
+.btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    margin-top:20px;
+    background:#4CAF50;
+    color:white;
+    font-size:18px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>🔴 暂停一下</h2>
+
+<p>
+现在不需要决定吃不吃
+</p>
+
+<div id="circle" class="circle">
+吸气
+</div>
+
+<div class="timer" id="timer">
+05:00
+</div>
+
+<div class="tip" id="tip">
+你不用现在决定明天怎么吃
+</div>
+
+<button class="btn" onclick="nextPage()">
+我已经冷静一些了
+</button>
+
+</div>
+
+<script>
+
+let timeLeft = 300;
+
+const timer = document.getElementById("timer");
+
+setInterval(function(){
+
+    timeLeft--;
+
+    let min = Math.floor(timeLeft / 60);
+    let sec = timeLeft % 60;
+
+    timer.innerHTML =
+        String(min).padStart(2,"0")
+        + ":"
+        +
+        String(sec).padStart(2,"0");
+
+    if(timeLeft <= 0){
+        window.location.href="/intensity";
+    }
+
+},1000);
+
+const circle = document.getElementById("circle");
+
+let inhale = true;
+
+setInterval(function(){
+
+    if(inhale){
+
+        circle.style.transform="scale(1.3)";
+        circle.innerHTML="吸气";
+
+    }else{
+
+        circle.style.transform="scale(1)";
+        circle.innerHTML="呼气";
+
+    }
+
+    inhale=!inhale;
+
+},4000);
+
+const tips = [
+
+"你不用现在决定明天怎么吃",
+
+"5分钟后再决定",
+
+"暴食冲动不是一直增长的",
+
+"现在最难受的也许是不确定感",
+
+"解决问题和缓解焦虑是两件事",
+
+"今晚发生什么都不决定你的未来",
+
+"你已经撑过很多次冲动了"
+
+];
+
+setInterval(function(){
+
+    let index=Math.floor(
+        Math.random()*tips.length
+    );
+
+    document.getElementById("tip")
+        .innerHTML=tips[index];
+
+},10000);
+
+function nextPage(){
+
+    window.location.href="/intensity";
+
+}
+
+</script>
+
+</body>
+</html>
