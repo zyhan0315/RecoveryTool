@@ -48,15 +48,21 @@ public class HomeController {
         return "need";
     }
 
-    @GetMapping("/past")
-    public String past(Model model) {
+   @GetMapping("/past")
+   public String past(Model model) {
 
-        model.addAttribute(
-                "record",
-                urgeRecordService.getRandomRecord());
+    var record = urgeRecordService.getRandomRecord();
 
-        return "past";
+    if(record == null) {
+        return "redirect:/action";
     }
+
+    model.addAttribute(
+            "record",
+            record);
+
+    return "past";
+}
 
     @GetMapping("/action")
     public String action() {
